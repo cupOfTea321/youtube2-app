@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import {Box} from "@mui/material";
 import Navbar from "./components/Navbar";
 import ChannelDetail from "./components/ChannelDetail";
@@ -9,7 +9,7 @@ import SearchFeed from "./components/SearchFeed";
 
 function App() {
   return (
-      <BrowserRouter>
+      <HashRouter basename={'/'}>
         <Box sx={{backgroundColor: '#000'}}>
             <Navbar/>
             <Routes>
@@ -19,7 +19,7 @@ function App() {
               <Route path={'/search/:searchTerm'} exact element={<SearchFeed/>}/>
             </Routes>
         </Box>
-      </BrowserRouter>
+      </HashRouter>
 
   );
 }
