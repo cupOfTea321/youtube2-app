@@ -7,7 +7,7 @@ import Videos from "./Videos";
 
 const ChannelDetail = () => {
     const  { id } = useParams()
-    const [channelDetail, setChannelDetail] = useState()
+    const [channelDetail, setChannelDetail] = useState(null)
     const [videos, setVideos] = useState([])
 
     useEffect(() => {
