@@ -8,10 +8,12 @@ import VideoDetail from "./components/VideoDetail";
 import SearchFeed from "./components/SearchFeed";
 
 function App() {
+
+  alert('привет, пользователь!')
+
   return (
       <HashRouter basename={'/'}>
         <Box sx={{backgroundColor: '#000'}}>
-            <Navbar/>
             <Routes>
               <Route path={'/'} exact element={<Feed/>}/>
               <Route path={'/video/:id'} exact element={<VideoDetail/>}/>
